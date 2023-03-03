@@ -1,0 +1,32 @@
+<?php
+require_once "Employee.php";
+require_once "Prive.php";
+require_once "Pubilc.php";
+require_once "EmployeeI.php";
+require_once "EmployeeImpli.php";
+require_once "EmployeeIm.php";
+require_once "EmployeeImyo.php";
+$prive1=new Prive("NAJEM","med","300000","prive","toyota");
+$public1 =new Pubilc("med","najem","180000","public","noir");
+$prive =new EmployeeImpli();
+$public =new EmployeeImyo();
+
+//echo $prive->getNote();
+echo "PRIVE <br>";
+echo $prive1;
+echo "<br>";
+echo "PUBLIC <br>";
+echo $public1;
+echo "<br>";
+echo "les information de prive";
+echo "<br>";
+$prive->nombreJourConge($prive1)."<br>";
+echo "<br>";
+$prive->salair($prive1)."<br>";
+echo "<br>";
+$prive->prime($prive1)."<br>";
+echo "les information Public";
+echo "<br>";
+$public->nombreJourConge($public1)."<br>";
+echo "<br>";
+$public->salair($public1)."<br>";
